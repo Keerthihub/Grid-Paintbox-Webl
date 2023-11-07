@@ -21,12 +21,18 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+// Header Navigation
+
 header {
   display: flex;
   padding: 20px 40px;
   background-color: #fff;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  overflow: hidden;
+  top: 0;
 
   .logo {
     width: 3rem;
@@ -79,6 +85,8 @@ header {
   }
 }
 
+// Header Content
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -119,14 +127,273 @@ header {
     background: #fff;
     border: none;
     color: #000;
-    margin: 4px 3px 2px 0;
-    padding: 18px 20px;
-    width: 240px;
+    margin: 4px 3px 2px 2px;
+    padding: 18px 40px;
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 2.2px;
+    font-size: 12px;
+    letter-spacing: 2.8px;
     vertical-align: center;
     text-align: center;
     margin-top: 24px;
+    text-transform: uppercase;
+  }
+}
+
+// Index Section
+
+.index-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 75px 45px;
+  margin: 0 6%;
+  max-width: 4500px;
+  column-gap: 2em;
+  row-gap: 8em;
+
+
+  .index-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+
+  h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    letter-spacing: 2.2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 30px;
+    font-family: 'spectral', serif;
+    text-align: center;
+    margin-bottom: 4px;
+    line-height: 1.06em;
+  }
+
+}
+
+  .cta-shop-index {
+    background: #000;
+    border: none;
+    color: #fff;
+    margin: 4px 3px 2px 2px;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.8px;
+    vertical-align: center;
+    text-align: center;
+    margin-top: 24px;
+    text-transform: uppercase;
+  }
+
+    img {
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+}
+
+// Shop Section
+
+.shop-items-wrapper {
+  padding: 75px 40px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  h3 {
+    font-size: 34px;
+    font-family: 'Spectral', serif;
+    text-align: center;
+    margin-bottom: 2.2em;
+    color: #414141;
+  }
+
+  .shop-list {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1500px;
+
+    .shop-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      object-fit: cover;
+      overflow: hidden;
+
+      h2 {
+        font-family: "freight-display-pro", "Times New Roman", serif;
+        font-size: 30px;
+        font-style: italic;
+    background: #fff;
+        line-height: 38px;
+        margin: 20px 0px 10px 0;
+        color: #414141;
+      }
+
+     h6 {
+        color: #414141;
+        margin: 5px;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 12px;
+      }
+
+      img {
+        width: 100%;
+        display: block;
+      }
+
+    }
+  }
+}
+
+// Banner
+
+.shop-banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  background-color: #f3ede8;
+  padding: 130px 0;
+  margin: 4em 0 9em 0;
+
+  h6{
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+    letter-spacing: 2.2px;
+    text-transform: uppercase;
+    color: #414141;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: 'Spectral', serif;
+    text-align: center;
+    color: #414141;
+    line-height: 1.4;
+  }
+}
+
+// Collection Section
+
+.collection-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  padding: 0 20px;
+
+  .collection-content {
+      height: 100vh;
+      width: 100%;
+      background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("/assets/collection-1.jpeg");
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+
+    h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: .8em;
+    letter-spacing: 2.2px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    font-size: 38px;
+    font-family: 'Spectral', serif;
+    text-align: center;
+    margin-bottom: 14px;
+    line-height: 1.1;
+  }
+
+  p {
+    font-family: 'Spectral', serif;
+    font-style: italic;
+    font-size: 1em;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    vertical-align: middle;
+  }
+
+  .cta-shop {
+    border: 2px solid #fff;
+    color: #fff;
+    margin: 4px 3px 2px 2px;
+    padding: 18px 40px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2.8px;
+    vertical-align: center;
+    text-align: center;
+    margin-top: 24px;
+    text-transform: uppercase;
+  }
+  }
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  font-family: "proxima-nova", "Helvetica", "Arial", sans-serif;
+  font-size: 10.5px;
+  letter-spacing: 2.2px;
+  padding: 100px 65px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  background-color: #f3ede8;
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .column-title {
+      color: #9d9d9c;
+      background-color: #f3ede8;
+      font-family: proxima-nova,Helvetica,Arial,sans-serif;
+      font-size: 10px;
+      letter-spacing: 2.2px;
+      margin-bottom: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+    }
+
+    ul {
+      text-align: center;
+
+        li {
+          color: #414141;
+          margin-bottom: 15px;
+        }
+      }
+      &:nth-child(2) {
+        border-right: 1px solid #414141;
+        border-left: 1px solid #414141;
+      }
   }
 }
